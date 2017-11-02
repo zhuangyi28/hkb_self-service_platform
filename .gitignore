@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+#Ignore .idea files
+.idea
+build
+dist
+
