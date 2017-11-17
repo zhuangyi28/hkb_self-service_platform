@@ -1,0 +1,571 @@
+/*成员管理-添加成员*/
+
+
+.hkb_membership_section{
+
+  margin: 100px auto;
+  background: white;
+  width: 90%;
+  height: 75%;
+  border-radius: 10px;
+  box-shadow: 0 0 2px #bbbbbb;
+
+  .section_membership_top{
+
+    background: #e6efdd;
+    width: 100%;
+    height: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+    div{
+      display: inline-block;
+      width: 50%;
+    }
+
+    .membership_top_title{
+
+      padding: 15px 15px;
+      vertical-align: middle;
+
+      img{
+        width: 28px;
+        vertical-align: middle;
+      }
+
+
+      span{
+        font-size: 20px;
+        vertical-align: middle;
+        padding-left: 10px;
+
+        span:last-child{
+          font-size: 18px;
+        }
+
+      }
+    }
+
+
+    /*返回按钮*/
+    .membership_top_button{
+       background: white;
+       width: 80px;
+       height: 25px;
+       border-radius: 3px;
+       box-shadow: 0 0 2px #bbbbbb;
+       display: inline-block;
+       text-align: center;
+       padding-top: 5px;
+       position: absolute;
+       left: 91%;
+       top:15px;
+
+
+
+
+      a{
+        color: #4a4a4a;
+        letter-spacing: 2px;
+
+      }
+     }
+    a:hover{
+
+        color: #469102;
+
+     }
+
+    .membership_top_button:active {
+
+      box-shadow: 0 0 3px #469102;
+    }
+
+   a:active {
+     color: #469102;
+      opacity: 0.6;
+    }
+  }
+
+
+
+
+
+  .section_membership_center{
+
+    padding: 4% 140px;
+
+    &:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+    .membership_input_left{
+      width: 50%;
+      float: left;
+
+        label{
+          display: block;
+          margin-bottom: 30px;
+
+          &:first-child{
+           padding-left: 16px;
+
+          }
+          .membership_input_title_first{
+
+            display: inline-block;
+            font-size: 16px;
+            padding-left: 4px;
+
+          }
+        .membership_input_title{
+
+          display: inline-block;
+          font-size: 16px;
+          color: #4a4a4a;
+
+        }
+
+        input.membership_input_add{
+
+          width:250px;
+          height:26px;
+          border:1px solid #dddddd;
+          border-radius: 3px;
+
+          &:hover,&:active{
+            border: 1px solid #469102;
+            opacity: .6;
+            box-shadow: 0 0 3px #469102;
+          }
+          &:focus+input.membership_input_add{
+            border: 1px solid #469102;
+            opacity: .6;
+            box-shadow: 0 0 3px #469102;
+          }
+        }
+
+          .membership_input_prompt_first{
+
+            font-size: 10px;
+            color: #f09a39;
+            padding-left: 70px;
+            padding-top: 5px;
+            width: 90%;
+
+          }
+
+      .membership_input_prompt{
+
+        font-size: 10px;
+        color: #f09a39;
+        padding-left: 82px;
+        padding-top: 5px;
+        width: 90%;
+
+      }
+      }
+    }
+
+
+    .membership_select_right{
+
+      width: 50%;
+      float: right;
+      right: 30px;
+      font-size: 16px;
+
+      .membership_select_job{
+        margin-bottom: 55px;
+        padding-top: 5px;
+
+      }
+
+      .membership_select_seller{
+        margin-bottom: 35px;
+      }
+
+      div{
+
+      .membership_select_title{
+
+        font-size: 16px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 46px;
+
+      }
+        select{
+
+        font-size: 16px;
+        vertical-align: middle;
+        display: inline-block;
+        width:250px;
+        height:32px;
+        border:1px solid #dddddd;
+        border-radius: 3px;
+          margin-bottom: 46px;
+
+          &:hover{
+            border: 1px solid #469102;
+            opacity: .6;
+            box-shadow: 0 0 3px #469102;
+
+          }
+          option.green:hover{
+            background-color: #e6efdd;
+            color:#fff;
+          }
+
+
+
+
+
+
+
+      }
+
+      }
+    }
+
+
+  }
+
+
+
+
+  /*按钮*/
+
+  .section_membership_base {
+    margin: 0 auto;
+    background: #469102;
+    width: 160px;
+    height: 30px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px #bbbbbb;
+    cursor: pointer;
+
+    .membership_base_button {
+
+      text-align: center;
+      color: white;
+      top: 26%;
+      right: 20px;
+      padding-top: 5px;
+      letter-spacing: 4px;
+
+    }
+    &:hover{
+      opacity: 0.8;
+    }
+
+
+    .section_membership_base:active {
+      opacity: 0.6;
+      background: #469102;
+    }
+  }
+    }
+
+
+.membership_footer {
+
+  width: 100%;
+  bottom: 0;
+  box-sizing: border-box;
+  height: 50px;
+  min-width: 1100px;
+  position: absolute;
+
+
+
+  & > div {
+    display: inline-block;
+    width: 100%;
+    z-index: 100;
+    padding-top: 5px;
+    color: #8a8a8a;
+    font-size: 12px;
+    text-align: center;
+  }
+
+
+  .membership_footer_ip {
+
+    text-align: center;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*自适应无线端*/
+
+@media screen and (max-width:750px) {
+  body {
+    overflow-x: hidden;
+  }
+  .hkb_membership_section {
+
+    margin: 50px auto;
+    background: white;
+    width: 96%;
+    height: 130%;
+    border-radius: 10px;
+    box-shadow: 0 0 2px #bbbbbb;
+
+    .section_membership_top {
+
+      background: #e6efdd;
+      width: 100%;
+      height: 60px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      display: inline-block;
+      white-space: nowrap;
+      position: relative;
+
+      div {
+        display: inline-block;
+        width: 50%;
+      }
+
+      .membership_top_title {
+
+        padding: 15px 2px;
+        vertical-align: middle;
+
+        img {
+          width:0;
+        }
+        span.membership_add_title{
+          opacity: 0;
+        }
+        span {
+          font-size: 22px;
+          vertical-align: middle;
+          position: relative;
+          right: 120px;
+          }
+      }
+
+      /*返回按钮*/
+      .membership_top_button {
+
+        padding-top: 5px;
+        position: absolute;
+        left: 70%;
+        top: 15px;
+
+        a {
+          color: #4a4a4a;
+          letter-spacing: 2px;
+
+        }
+      }
+      a:hover {
+        color: #469102;
+
+      }
+
+      .membership_top_button:active {
+
+        box-shadow: 0 0 3px #469102;
+      }
+
+      a:active {
+        color: #469102;
+        opacity: 0.6;
+      }
+    }
+
+
+
+    /*主要内容部分*/
+    .section_membership_center {
+
+      padding: 3% 0;
+      margin: 0 auto;
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .membership_input_left {
+        width: 95%;
+        float: none;;
+        /*padding-left: 17px;*/
+        margin: 5px auto;
+
+        label {
+
+          margin: 5px auto;
+
+          &:first-child {
+            padding-left: 0;
+          }
+
+          .membership_input_title_first {
+
+            display: inline-block;
+            font-size: 16px;
+            padding-left: 8px;
+
+          }
+          .membership_input_title {
+
+            display: inline-block;
+            font-size: 16px;
+            padding-left: 8px;
+          }
+
+          input.membership_input_add {
+
+            width: 95%;
+            height: 26px;
+            border: 1px solid #dddddd;
+            border-radius: 3px;
+            margin: 8px 8px;
+
+            &:hover, &:active {
+              border: 1px solid #469102;
+              opacity: .6;
+              box-shadow: 0 0 3px #469102;
+            }
+            &:focus + input.membership_input_add {
+              border: 1px solid #469102;
+              opacity: .6;
+              box-shadow: 0 0 3px #469102;
+            }
+          }
+
+          .membership_input_prompt_first {
+
+            font-size: 12px;
+            color: #f09a39;
+            padding-left: 10px;
+
+          }
+
+          .membership_input_prompt {
+
+            font-size: 12px;
+            color: #f09a39;
+            padding-left: 10px;
+
+          }
+        }
+      }
+
+      .membership_select_right {
+
+        width: 100%;
+        float: none;
+        right: 0;
+
+        .membership_select_job {
+          margin-bottom: 10px;
+          padding: 2px 18px;
+
+        }
+
+        .membership_select_seller {
+          margin-bottom: 10px;
+          padding: 2px 18px;
+
+        }
+
+        div {
+
+          .membership_select_title {
+
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-bottom: 10px;
+            padding: 2px 18px;
+
+          }
+          select {
+            margin: 2px 0 15px 17px;
+            font-size: 16px;
+            vertical-align: middle;
+            display: inline-block;
+            width: 90%;
+            height: 32px;
+            border: 1px solid #dddddd;
+            border-radius: 3px;
+            text-align: center;
+
+            &:hover {
+
+              border: 1px solid #469102;
+              opacity: .6;
+              box-shadow: 0 0 3px #469102;
+
+            }
+            option.green:hover {
+
+              background-color: #e6efdd;
+              color: #fff;
+
+            }
+          }
+        }
+      }
+    }
+
+
+    /*按钮*/
+
+    .section_membership_base {
+      margin: 0 auto;
+      background: #469102;
+      width: 90%;
+      height: 30px;
+      border-radius: 3px;
+      box-shadow: 0 0 2px #bbbbbb;
+      cursor: pointer;
+
+
+
+      .membership_base_button {
+
+      }
+      &:hover{
+        opacity: 0.8;
+      }
+
+
+      .section_membership_base:active {
+        opacity: 0.6;
+        background: #469102;
+      }
+
+    }
+
+
+
+  }
+
+  .login_footer {
+
+   width: 0;
+
+  }
+  }
+
