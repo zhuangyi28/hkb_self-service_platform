@@ -18,17 +18,20 @@ function devImg() {
 
             progressive: true,
 
+
             use: [pngquant()]
 
         })))
 
         .pipe(gulp.dest('build/icon'));
 
-    gulp.src('src/images/**/*.{png,jpg,gif}')
+    gulp.src('src/images/*.{png,jpg,gif,ico}')
 
         .pipe(cache(imagemin({
 
             progressive: true,
+
+            // svgoPlugins: [{removeViewBox: false}],
 
             use: [pngquant()]
 
@@ -36,9 +39,9 @@ function devImg() {
 
         .pipe(gulp.dest('build/images'));
 
-    gulp.src("src/fonts/*.*")
+    gulp.src("src/font/*.*")
 
-        .pipe(gulp.dest('build/fonts'))
+        .pipe(gulp.dest('build/font'))
 
 
 }
