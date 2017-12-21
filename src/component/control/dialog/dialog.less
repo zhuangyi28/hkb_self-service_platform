@@ -1,0 +1,276 @@
+.hkb_dialog{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  .dialog_bg{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0;
+    z-index: 1000;
+    transition: opacity .5s;
+  }
+  .dialog_box{
+    z-index: 1001;
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(129,176,86,.2);
+    border-radius: 10px;
+    outline: 0;
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    width: 800px;
+    margin: 140px auto;
+    overflow: hidden;
+    transform: translate3d(0,-25%,0);
+    transition: all .3s ease-out;
+    @media screen and (max-width:414px){
+      width: 320px;
+    }
+
+  }
+  .dialog_top{
+    position: relative;
+    background: #81b056;
+    padding: 15px;
+    font-size: 22px;
+    color: #fff;
+    .dialog_close{
+      float: right;
+      position: relative;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.2);
+      background-size: 100%;
+      vertical-align: middle;
+      color: #fff;
+      cursor: pointer;
+      span{
+        font-size: 24px;
+        padding: 0 6px;
+        vertical-align: middle;
+        text-align: center;
+      }
+      &:hover{
+        color: rgba(255,255,255,.8);
+      }
+    }
+    &:after{
+      content: '';
+      clear: both;
+      height: 0;
+      overflow: visible;
+    }
+  }
+  .dialog_body{
+    padding: 30px 15px;
+    min-height: 100px;
+  }
+  .dialog_footer{
+    border-top: 1px solid #e5e5e5;
+    padding: 15px 0;
+    text-align: center;
+    .hkb_btn{
+      display: inline-block;
+      padding: 6px 12px;
+      margin-bottom: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.42857143;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      touch-action: manipulation;
+      cursor: pointer;
+      user-select: none;
+      background-image: none;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      width: 100px;
+      height: 34px;
+      margin-left: 15px;
+
+
+    }
+    .btn_green{
+      background-color: #398a2b;
+      color: #fff;
+      &:hover{
+      background-color: #3d952e;
+    }
+
+    }
+    .btn_white{
+      background-color: #fff;
+      color: #4a4a4a;
+      border: 1px solid #ddd;
+      &:hover{
+        background-color: #fbfbfb;
+      }
+    }
+
+  }
+}
+#hkb_dialog_text{
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+    .dialog_box{
+      z-index: 1001;
+      position: relative;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid rgba(129,176,86,.2);
+      border-radius: 10px;
+      outline: 0;
+      box-shadow: 0 3px 9px rgba(0,0,0,.5);
+      width: 800px;
+      margin: 140px auto;
+      overflow: hidden;
+      animation: showDialog .5s both;
+      transform: translate3d(0,-25%,0);
+      transition: all .3s ease-out;
+      @keyframes showDialog{
+        0% {
+          opacity: 0;
+          transform: translate3d(0,-25%,0);
+        }
+        100% {
+          opacity: 1;
+          transform: translate3d(0,0,0);
+        }
+      }
+      @media screen and (max-width:414px){
+        width: 320px;
+      }
+
+    }
+    .dialog_top{
+      position: relative;
+      background: #81b056;
+      padding: 15px;
+      font-size: 22px;
+      color: #fff;
+      .dialog_close{
+        float: right;
+        position: relative;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: rgba(255,255,255,.2);
+        background-size: 100%;
+        vertical-align: middle;
+        color: #fff;
+        cursor: pointer;
+        span{
+          font-size: 24px;
+          padding: 0 6px;
+          vertical-align: middle;
+          text-align: center;
+        }
+        &:hover{
+          color: rgba(255,255,255,.8);
+        }
+      }
+      &:after{
+        content: '';
+        clear: both;
+        height: 0;
+        overflow: visible;
+      }
+    }
+    .dialog_body{
+      padding: 30px 15px;
+      min-height: 100px;
+    }
+    .dialog_footer{
+      border-top: 1px solid #e5e5e5;
+      padding: 15px 0;
+      text-align: center;
+      .hkb_btn{
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        width: 100px;
+        height: 34px;
+        margin-left: 15px;
+
+
+      }
+      .btn_green{
+        background-color: #398a2b;
+        color: #fff;
+        &:hover{
+          background-color: #3d952e;
+        }
+
+      }
+      .btn_white{
+        background-color: #fff;
+        color: #4a4a4a;
+        border: 1px solid #ddd;
+        &:hover{
+          background-color: #fbfbfb;
+        }
+      }
+
+
+  }
+}
+#dialog_content_bg{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: .6;
+  z-index: 1000;
+  animation: opacity_bg_change .5s;
+  transition: opacity .5s;
+}
+@keyframes opacity_bg_change {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .6;
+  }
+}
+.hkb_dialog.show{
+
+  .dialog_bg{
+    opacity: .6;
+  }
+  .dialog_box{
+    transform: translate3d(0,0,0);
+  }
+}
+

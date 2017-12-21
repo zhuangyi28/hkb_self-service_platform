@@ -1,0 +1,137 @@
+/*table列表*/
+.info_content_table{
+  margin-bottom: 30px;
+
+  .table_single,.table_box{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    .hkb_title_tr{
+      color: #4a4a4a;
+      text-align: center;
+      border-bottom: none;
+      background-color:#e6efdd;
+
+      .th_border{
+        border-top: 1px solid #ddd;
+      }
+
+
+      th{
+        padding: 10px 0;
+        border-right: 1px solid #ddd ;
+        text-align:center;
+        vertical-align:middle;
+
+      }
+
+    }
+
+    td{
+      padding: 8px;
+      line-height: 1.42857143;
+      vertical-align: middle;
+      border-right: 1px solid #ddd;
+      color: #6e6e6e;
+      p{
+        font-size: 12px;
+      }
+      &.table_operation{
+        position: relative;
+        white-space: nowrap;
+        color: #398a2b;
+
+        transition: all ease-in-out .2s;
+        a{
+          cursor: pointer;
+          &:hover,&:active{
+            color: #81b056;
+          }
+        }
+        a:first-child{
+          margin-left: 0;
+        }
+        a{
+          margin-left: 30px;
+
+        }
+
+      }
+
+
+
+      &:last-child{
+        border-right: none;
+      }
+    }
+    /*勾选框*/
+    input.choose_check{
+      -webkit-appearance: none;
+      outline: 0;
+      font-size: 0;
+      border: 1px solid #ddd;
+      background-color: #fff;
+      border-radius: 3px;
+      width: 13px;
+      height: 13px;
+      position: relative;
+      vertical-align: 0;
+      top: 2px;
+      &:checked:before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 5px;
+        height: 10px;
+        left: 3px;
+        top: -2px;
+        border-bottom: solid 1px #398a2b;
+        border-right: solid 1px #398a2b;
+        transform: rotate(45deg);
+      }
+    }
+
+    /*表单中输入列表*/
+    input.edit_input{
+      height: 38px;
+      min-width: 162px;
+      line-height: 38px;
+      border: 1px solid transparent;
+      background-color: transparent;
+      border-radius: 5px;
+      text-align: center;
+      &:focus{
+        border-color: #398a2b;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(32, 79, 24, 0.075), 0 0 8px rgba(75, 138, 43, 0.6);
+      }
+    }
+
+  }
+
+  .table_box{
+    border-bottom: none;
+    overflow-x: auto;
+    tbody{
+      tr:nth-of-type(even){
+        background-color: #f6f6f6;
+
+      }
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 460px){
+
+  .info_content_table{
+
+    word-break: keep-all;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 0;
+  }
+}

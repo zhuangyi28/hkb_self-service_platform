@@ -1,0 +1,79 @@
+<!--编辑成员 模态框-->
+<div class="hkb_dialog" id="editMember">
+
+    <div class="dialog_bg"></div>
+    <div class="dialog_box">
+        <div class="dialog_top">
+            <div class="dialog_close"><span>×</span></div>
+            <p>成员管理编辑</p>
+        </div>
+        <!-- body-->
+        <div class="dialog_body">
+            <div class="dialog_content">
+                <!-- list 1-->
+                <div class="dialog_list">
+                    <div>
+                        <span>用户名：</span>
+                        <span>庄中煲</span>
+                    </div>
+                    <div>
+                        <span>手机号码：</span>
+                        <span>13819726535</span>
+                    </div>
+                </div>
+                <div class="dialog_list">
+                    <div>
+                        <span>登录密码：</span>
+                        <span><input type="password" class="dialog_input" placeholder="请输入登录密码" value="iasbnfuisbsi"></span>
+                    </div>
+                    <div>
+                        <span>确认密码：</span>
+                        <span><input type="password" class="dialog_input" placeholder="请输入登录密码" value="iasbnfuisbsi"></span>
+                    </div>
+                </div>
+
+                <!-- list 2-->
+                <div class="dialog_list">
+                    <div>
+                        <span>所属行业：</span>
+                        <span>餐饮(园区食堂)</span>
+                    </div>
+                    <div>
+                        <span>所属商户：</span>
+                        <span>烟波亭</span>
+                    </div>
+                </div>
+                <div class="dialog_list">
+                    <div>
+                        <span>职位选择：</span>
+                        <span>
+                            <select class="dialog_input">
+                        <option value="请选择" selected="selected">请选择</option>
+                        <option value="总财务">总财务</option>
+                        <option value="门店店长">门店店长</option>
+                        <option value="门店财务">门店财务</option>
+                        <option value="物管">物管</option>
+                        </select>
+                        </span>
+                    </div>
+                    <div>
+                        <span>门店选择：</span>
+                        <span>
+                            <select class="dialog_input">
+                        <option value="已选择" selected="selected">请选择</option>
+                        <option value="已归档">已归档</option>
+                        <option value="未归档">未归档</option>
+                        <option value="原始数据">原始数据</option>
+                        <option value="已调整">已调整</option>
+                    </select>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="dialog_footer">
+            <button type="button" class="hkb_btn btn_green" onclick="editDialog.hide()">保存</button>
+        </div>
+    </div>
+</div>

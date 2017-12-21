@@ -1,12 +1,9 @@
 <div class="content_body">
 
     <div class="title_content_title">
-        <p><img src="../../icon/tab_management_data_green.png">商户数据</p>
+        <p><img src="../../icon/tab_management_data_green.png"><span>商户数据</span>&nbsp;>&nbsp;<span>门店数据</span>&nbsp;>&nbsp;档口数据</p>
+        <p><button type="button" class="hkb_btn btn_white">返回</button></p>
     </div>
-
-
-
-
 
     <!-- 操作组件-->
 
@@ -17,7 +14,7 @@
             <div class="hkb_date_list">
                 <span>开始时间：</span>
                 <span>
-                     <input type="text" class="layui-input hkb_item tcal" placeholder="请输入开始时间">
+                     <input type="text" class="layui-input hkb_item tcal" placeholder="请输入开始时间" >
 
                 </span>
             </div>
@@ -34,15 +31,7 @@
 
         <div class="control_list btn_list" style="text-align: right">
 
-                <button type="button" class="hkb_btn btn_green" onclick="basicHkb.dialogShow({
-
-'dialogTitle':'222',
-'dialogContent':'111',
-'noCheck':true,
-'cancleBtnText':'关闭'
-
-
-})">查询</button>
+                <button type="button" class="hkb_btn btn_green">查询</button>
 
                 <button type="button" class="hkb_btn btn_white">重置</button>
 
@@ -51,53 +40,11 @@
 
     </div>
 
-    <!-- table -->
-    <div class="info_content_table">
-
-
-        <!-- table 单独-->
-        <table class="table_single"  border="0" cellpadding="0" cellspacing="1" rules="cols">
-            <thead>
-            <tr class="hkb_title_tr">
-                <th>会员卡消费总额</th>
-                <th>快捷消费</th>
-                <th>线上充值金额</th>
-                <th>线上充值面额</th>
-                <th>平台充值金额</th>
-                <th>平台充值面额</th>
-                <th>平台充值面额</th>
-                <th>平台补贴笔数</th>
-                <th>平台补贴金额</th>
-                <th>会员卡余额</th>
-                <th>服务费</th>
-                <th>结算金额</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr align="center">
-                <td>4623196845615.00</td>
-                <td>14561436</td>
-                <td>22</td>
-                <td>123</td>
-                <td>1</td>
-                <td>300</td>
-                <td>10</td>
-                <td>300</td>
-                <td>300</td>
-                <td>50000.00</td>
-                <td>300</td>
-                <td>50000.00</td>
-            </tr>
-
-            </tbody>
-        </table>
-
-    </div>
-
     <!-- table title-->
 
     <div class="title_content_title title_gray">
-        <p>总计</p>
+        <p>小火锅</p>
+        <p><button type="button" class="hkb_btn btn_green">导出表格</button></p>
     </div>
 
     <!-- table -->
@@ -109,27 +56,13 @@
         <table class="table_box"  border="0" cellpadding="0" cellspacing="1" rules="cols">
             <thead>
             <tr class="hkb_title_tr" >
-                <th rowspan="2" align="middle">分店名</th>
-                <th rowspan="2">
-                    <p>会员卡</p>
-                    <p>消费总额</p>
-                </th>
-                <th rowspan="2">
-                    <p>快捷消费</p>
-                    <p>总额</p>
-                </th>
-                <th colspan="4">会员卡充值</th>
-                <th colspan="2">平台补贴</th>
-                <th rowspan="2">操作</th>
+                <th align="middle">流水号</th>
+                <th>交易金额</th>
+                <th>交易类型</th>
+                <th>卡号</th>
+                <th>账户号</th>
+                <th>交易时间</th>
 
-            </tr>
-            <tr class="hkb_title_tr">
-                <th class="th_border">线上充值金额</th>
-                <th>平台充值面额</th>
-                <th>平台充值金额</th>
-                <th>平台充值面额</th>
-                <th class="th_border">笔数</th>
-                <th>金额</th>
             </tr>
             </thead>
             <tbody>
@@ -143,10 +76,6 @@
                 <td>123</td>
                 <td>1</td>
                 <td>300</td>
-                <td>10</td>
-                <td>300</td>
-                <td>300</td>
-                <td class="table_operation"><a>明细</a></td>
             </tr>
             <tr align="center">
                 <td>
@@ -158,10 +87,6 @@
                 <td>123</td>
                 <td>1</td>
                 <td>300</td>
-                <td>10</td>
-                <td>300</td>
-                <td>300</td>
-                <td class="table_operation"><a>明细</a></td>
             </tr>
             <tr align="center">
                 <td>
@@ -173,10 +98,6 @@
                 <td>123</td>
                 <td>1</td>
                 <td>300</td>
-                <td>10</td>
-                <td>300</td>
-                <td>300</td>
-                <td class="table_operation"><a>明细</a></td>
             </tr>
             <tr align="center">
                 <td>
@@ -188,10 +109,6 @@
                 <td>123</td>
                 <td>1</td>
                 <td>300</td>
-                <td>10</td>
-                <td>300</td>
-                <td>300</td>
-                <td class="table_operation"><a>明细</a></td>
             </tr>
             <tr align="center">
                 <td>
@@ -203,10 +120,6 @@
                 <td>123</td>
                 <td>1</td>
                 <td>300</td>
-                <td>10</td>
-                <td>300</td>
-                <td>300</td>
-                <td class="table_operation"><a>明细</a></td>
             </tr>
             <tr align="center">
                 <td>
@@ -218,10 +131,6 @@
                 <td>123</td>
                 <td>1</td>
                 <td>300</td>
-                <td>10</td>
-                <td>300</td>
-                <td>300</td>
-                <td class="table_operation"><a>明细</a></td>
             </tr>
             <tr align="center">
                 <td>
@@ -233,10 +142,6 @@
                 <td>123</td>
                 <td>1</td>
                 <td>300</td>
-                <td>10</td>
-                <td>300</td>
-                <td>300</td>
-                <td class="table_operation"><a>明细</a></td>
 
             </tr>
             <tr align="center">
@@ -249,10 +154,6 @@
                 <td>123</td>
                 <td>1</td>
                 <td>300</td>
-                <td>10</td>
-                <td>300</td>
-                <td>300</td>
-                <td class="table_operation"><a>明细</a></td>
 
             </tr>
             </tbody>
@@ -278,7 +179,6 @@
             <div style="clear: both"></div>
         </ul>
     </div>
-
 
 </div>
 

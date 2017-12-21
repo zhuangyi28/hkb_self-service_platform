@@ -97,9 +97,9 @@ hkbDropDown.prototype.hide = function (details) {
 
 };*/
 
+var basicPlatform = {
 
-
-(function(){
+    tabChange:function(){
 
 
     var huikabaoTabul=document.getElementById('HKB_tabUl');
@@ -147,9 +147,6 @@ hkbDropDown.prototype.hide = function (details) {
 
 
 
+}
 
-
-
-
-
-})();
+};
