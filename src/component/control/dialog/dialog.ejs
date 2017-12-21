@@ -1,0 +1,43 @@
+<button onclick="textDialog.show()">点我</button>
+
+<!--模态框-->
+<div class="hkb_dialog" id="text1">
+
+    <div class="dialog_bg"></div>
+    <div class="dialog_box">
+        <div class="dialog_top">
+            <div class="dialog_close"><span>×</span></div>
+            <p>成员管理添加详情</p>
+        </div>
+        <!-- body-->
+        <div class="dialog_body">
+            <div class="dialog_content">
+                内容添加
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="dialog_footer">
+            <button type="button" class="hkb_btn btn_green" onclick="textDialog.hide()">保存</button>
+            <button type="button" class="hkb_btn btn_white" onclick="textDialog.hide()">取消</button>
+        </div>
+    </div>
+</div>
+
+<button onclick="basicHkb.dialogShow({
+
+'dialogTitle':'222',
+'dialogContent':'111',
+'noCheck':true,
+'cancleBtnText':'关闭'
+
+
+})">我我我</button>
+
+<script>
+
+    textDialog = new hkbShowDialog({
+        'ele': 'text1'
+    })
+
+
+</script>

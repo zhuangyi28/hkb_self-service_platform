@@ -21,9 +21,9 @@
                         <!-- 内容1-->
                         <div class="drop_content_tab">
                             <p class="img_box">
-                                <img src="../../icon/tab_store_data_green.png">
+                                <img src="../../icon/tab_management_data_green.png">
                             </p>
-                            <p>运营数据查询</p>
+                            <p>商户数据</p>
                         </div>
 
                         <!-- 内容2-->
@@ -31,7 +31,15 @@
                             <p class="img_box">
                                 <img src="../../icon/tab_store_data_green.png">
                             </p>
-                            <p>商户数据修改</p>
+                            <p>门店数据</p>
+                        </div>
+
+                        <!-- 内容2-->
+                        <div class="drop_content_tab">
+                            <p class="img_box">
+                                <img src="../../icon/tab_set_data_green.png">
+                            </p>
+                            <p>运营数据设置</p>
                         </div>
 
                         <!-- arrow-->
@@ -57,19 +65,10 @@
                         <!-- 内容1-->
                         <div class="drop_content_tab">
                             <p class="img_box">
-                                <img src="../../icon/tab_store_data_green.png">
+                                <img src="../../icon/tab_management_member_green.png">
                             </p>
                             <p>成员管理</p>
                         </div>
-
-                        <!-- 内容2-->
-                        <div class="drop_content_tab">
-                            <p class="img_box">
-                                <img src="../../icon/tab_store_data_green.png">
-                            </p>
-                            <p>商户数据修改</p>
-                        </div>
-
                         <!-- arrow-->
 
 
@@ -95,7 +94,7 @@
 
                         <div class="drop_content_tab">
                             <p class="img_box">
-                                <img src="../../icon/tab_store_data_green.png">
+                                <img src="../../icon/tab_query_data_green.png">
                             </p>
                             <p>商户数据查询</p>
                         </div>
@@ -121,94 +120,7 @@
 
 
 
-    /*changeTab();
-
-
-    function changeTab() {
-
-
-        var thisEle = document.getElementById('tabUl');
-
-
-        thisEle.addEventListener('click', function (e) {
-
-
-            var evt = e || window.event;
-
-            var thisTargetEle = evt.srcElement || evt.target;
-
-            //console.log(thisTargetEle)
-
-            //先清除页面上的selected
-
-
-
-            //点击的是不是本身
-
-            if (thisTargetEle != thisEle) {
-
-                var targetEle;
-
-                if (thisEle.getElementsByClassName('selected')[0]) {
-
-
-                    thisEle.getElementsByClassName('selected')[0].className = thisEle.getElementsByClassName('selected')[0].className.replace(' selected', '');
-
-
-                }
-
-                if (thisTargetEle.className.indexOf('tab_block') > -1) { //如果点击是他本身
-
-                    targetEle = thisTargetEle;
-
-                }
-
-
-                else {  //如果不是的话
-
-                    targetEle = thisTargetEle.parentNode   //等于他的父元素
-                }
-
-
-
-                targetEle.className += ' selected'
-
-
-
-            }
-
-
-
-
-
-        }, false)
-
-    }*/
-
-
-   /* tab1Show = new hkbDropDown({
-
-        'ele' : 'tab1'
-
-    })*/
-
-
-
-
-//    hidePrompt();
-//
-//
-//    function hidePrompt () {
-//
-//        var allEle = document.getElementById('search_prompt').getElementsByClassName('jd_drop_down');
-//
-//        for (var i = 0; i < allEle.length; i++) {
-//
-//            allEle[i].className = 'jd_drop_down';
-//
-//        }
-//
-//    }
+basicPlatform.tabChange();
 
 
 </script>

@@ -6,27 +6,18 @@
   z-index: 10;
   width: 100%;
   box-sizing: border-box;
+  text-align: center;
   ul{
     position: relative;
     list-style-type: none;
     cursor: pointer;
     li{
-      float: left;
       &:hover{
         color: #000;
         transition: all ease-in-out .2s;
       }
     }
-    li+li{
-      float: right;
-    }
-    &:after{
-      content: '';
-      clear: both;
-      height: 0;
-      visibility: hidden;
-      display: block;
-    }
+
   }
 
 

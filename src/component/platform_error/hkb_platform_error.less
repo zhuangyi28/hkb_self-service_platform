@@ -1,0 +1,347 @@
+.hkb_platform_error{
+
+
+  .error_btn_area{
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hkb_error_btn{
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid #398a2b;
+    border-radius: 4px;
+    width: 325px;
+    color: #398a2b;
+    &:active,&:hover{
+      border-color: #9ac544;
+      color: #9ac544;
+    }
+  }
+
+
+}
+
+/*403*/
+.error_403{
+
+  .hkb_cartoon_pic{
+    position: relative;
+    width: 345px;
+    height: 238px;
+    margin: 120px auto;
+    margin-bottom: 20px;
+    overflow: hidden;
+    z-index:10;
+
+    /*背景*/
+    .bg_403{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 345px;
+      height: 238px;
+      background-image: url("../images/error_bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: 0 0;
+    }
+    /*红灯*/
+    .lamp_shape{
+      position: absolute;
+      top:72px;
+      right: 122px;
+      width: 12px;
+      height: 12px;
+      background-color: #ff7171;
+      border-radius: 50%;
+      animation: lamp 1s infinite;
+      animation-delay: .5s;
+      @keyframes lamp {
+        from {
+
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    }
+    /*雪花*/
+    .hkb_cartoon_snowflake{
+      .snowflake_01{
+         position: absolute;
+         top: 50px;
+         left: 260px;
+         width: 65px;
+         height: 55px;
+         background: url("../images/error_bg.png") no-repeat;
+         background-position: 0 -1620px;
+         z-index: 100;
+         animation: freedom1 3s infinite;
+         @keyframes freedom1 {
+           from {
+             top:120px;
+             opacity: 0;
+           }
+           to {
+             top:280px;
+             opacity: 1;
+           }
+         }
+       }
+      .snowflake_02{
+        position: absolute;
+        top: 10px;
+        left: 180px;
+        width: 65px;
+        height: 55px;
+        background: url("../images/error_bg.png") no-repeat;
+        background-position: 0 -1620px;
+        z-index: 100;
+        animation: freedom2 4s infinite;
+        animation-delay: .5s;
+        @keyframes freedom2 {
+          from {
+            top:60px;
+            opacity: 0;
+          }
+          to {
+            top:280px;
+            opacity: 1;
+          }
+        }
+      }
+      .snowflake_03{
+        position: absolute;
+        top: 0;
+        left: 100px;
+        width: 65px;
+        height: 55px;
+        background: url("../images/error_bg.png") no-repeat;
+        background-position: -80px -1620px;
+        z-index: 100;
+        animation: freedom3 3s infinite;
+        @keyframes freedom3 {
+          from {
+            top:0;
+            opacity: 0;
+          }
+          to {
+            top:280px;
+            opacity: 1;
+          }
+        }
+      }
+
+    }
+    /*字体*/
+    .text_403{
+      position: absolute;
+      bottom: 40px;
+      left: 20px;
+      color: #fff;
+      font-size: 16px;
+
+    }
+
+  }
+
+
+
+}
+
+/*404*/
+.error_404{
+
+  .hkb_cartoon_pic{
+    position: relative;
+    width: 345px;
+    height: 238px;
+    margin: 120px auto;
+    margin-bottom: 20px;
+    overflow: hidden;
+    z-index:10;
+
+    /*背景*/
+    .bg_404{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 345px;
+      height: 238px;
+      background-image: url("../images/error_bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: 0px -320px;
+    }
+    /*红灯*/
+    .rocket_404{
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      width: 130px;
+      height: 235px;
+      background-image: url("../images/error_bg.png");
+      background-repeat: no-repeat;
+      background-position: -260px -1705px;
+      z-index: 10;
+      animation: rocket 5s infinite;
+      animation-delay: 1s;
+      @keyframes rocket {
+        0% {
+          transform: translateY(0px);
+        }
+        100% {
+          transform: translateY(-200px);
+        }
+      }
+    }
+    /*烟*/
+    .smoke{
+      position: absolute;
+      bottom: -70px;
+      right: -20px;
+      width: 245px;
+      height: 235px;
+      background-image: url("../images/error_bg.png");
+      background-repeat: no-repeat;;
+      background-position: 0 -1705px;
+      animation: smokeMove 5s infinite;
+      animation-delay: 1s;
+      opacity: 0;
+      @keyframes smokeMove {
+        0% {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(50px);
+          opacity: .5;
+        }
+      }
+    }
+    /*云*/
+    .cloud_01{
+      position: absolute;
+      top:100px;
+      right: 20px;
+      width: 145px;
+      height: 55px;
+      background: url("../images/error_bg.png") no-repeat;
+      background-position: -140px -1620px;
+      animation: cloud1 5s infinite;
+      animation-delay: 1s;
+      opacity: 1;
+      @keyframes cloud1 {
+        0% {
+          transform: translateX(0px);
+
+        }
+        100% {
+          transform: translateX(40px);
+        }
+      }
+    }
+    /*云*/
+    .cloud_02{
+      position: absolute;
+      top:20px;
+      left: 20px;
+      width: 145px;
+      height: 55px;
+      background: url("../images/error_bg.png") no-repeat;
+      background-position: -295px -1620px;
+      animation: cloud2 5s infinite;
+      animation-delay: 1s;
+      @keyframes cloud2 {
+        0% {
+          transform: translateX(30px);
+          opacity: .8;
+        }
+        100% {
+          transform: translateX(-40px);
+          opacity: .8;
+        }
+      }
+    }
+    /*字体*/
+    .text_404{
+      position: absolute;
+      bottom: 60px;
+      left: 10px;
+      color: #fff;
+      font-size: 16px;
+
+    }
+
+  }
+}
+
+/*500*/
+.error_500{
+
+  .hkb_cartoon_pic{
+    position: relative;
+    width: 345px;
+    height: 238px;
+    margin: 120px auto;
+    margin-bottom: 20px;
+    overflow: hidden;
+    z-index:10;
+
+    /*背景*/
+    .bg_500{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 345px;
+      height: 238px;
+      background-image: url("../images/error_bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: 0 -620px;
+    }
+    .crane{
+      position: absolute;
+      top: 70px;
+      right: 100px;
+      width: 90px;
+      height: 119px;
+      background-image: url("../images/error_bg.png");
+      background-repeat: no-repeat;
+      background-position: -415px -1705px;
+      animation: craneUp 5s infinite;
+      @keyframes craneUp {
+        0% {
+          transform: translateX(0);
+
+        }
+        100% {
+          transform: translateX(-20px);
+        }
+      }
+    }
+    /*字体*/
+    .text_500{
+      position: absolute;
+      bottom: 50px;
+      left: 20px;
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+}

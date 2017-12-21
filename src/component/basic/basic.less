@@ -2,6 +2,7 @@
 * {
   font-family: Arial, 'Microsoft YaHei';
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 div, span, h1, p, img, ol, ul, li, form, label, table, tbody, tfoot, thead, tr, th, td, footer, header, menu, nav, section {
@@ -31,8 +32,13 @@ input:-webkit-autofill {
 
 
 html,body{
-  height: 100%;
-  width: 100%;
   margin: 0;
 
+}
+body{
+  height: 100%;
+}
+html{
+  min-height: 95%;
+  height: 0;
 }
