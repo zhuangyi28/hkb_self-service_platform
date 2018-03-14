@@ -14,7 +14,7 @@
             <div class="hkb_date_list">
                 <span>开始时间：</span>
                 <span>
-                     <input type="text" class="layui-input hkb_item tcal" placeholder="请输入开始时间">
+                     <input type="text" class="layui-input hkb_item jeinput moredate" placeholder="请输入开始时间" value="" readonly>
 
                 </span>
             </div>
@@ -22,7 +22,7 @@
             <div class="hkb_date_list">
                 <span>结束时间：</span>
                 <span>
-                     <input type="text" class="layui-input hkb_item tcal" placeholder="请输入结束时间">
+                     <input type="text" class="layui-input hkb_item jeinput moredate" placeholder="请输入结束时间" value="" readonly>
                 </span>
             </div>
         </div>
@@ -69,56 +69,56 @@
                 <td>14561436</td>
                 <td>22</td>
                 <td>22</td>
-                <td class="table_operation"><a>编辑</a><a>详情</a></td>
+                <td class="table_operation"><a href="../operate_data/hkb_operate_month_edit.html">编辑</a><a href="../operate_data/hkb_operate_month_detail.html">详情</a></td>
             </tr>
             <tr align="center">
                 <td>2017.7.21</td>
                 <td>14561436</td>
                 <td>22</td>
                 <td>22</td>
-                <td class="table_operation"><a>编辑</a><a>详情</a></td>
+                <td class="table_operation"><a href="../operate_data/hkb_operate_month_edit.html">编辑</a><a href="../operate_data/hkb_operate_month_detail.html">详情</a></td>
             </tr>
             <tr align="center">
                 <td>2017.7.21</td>
                 <td>14561436</td>
                 <td>22</td>
                 <td>22</td>
-                <td class="table_operation"><a>编辑</a><a>详情</a></td>
+                <td class="table_operation"><a href="../operate_data/hkb_operate_month_edit.html">编辑</a><a href="../operate_data/hkb_operate_month_detail.html">详情</a></td>
             </tr>
             <tr align="center">
                 <td>2017.7.21</td>
                 <td>14561436</td>
                 <td>22</td>
                 <td>22</td>
-                <td class="table_operation"><a>编辑</a><a>详情</a></td>
+                <td class="table_operation"><a href="../operate_data/hkb_operate_month_edit.html">编辑</a><a href="../operate_data/hkb_operate_month_detail.html">详情</a></td>
             </tr>
             <tr align="center">
                 <td>2017.7.21</td>
                 <td>14561436</td>
                 <td>22</td>
                 <td>22</td>
-                <td class="table_operation"><a>编辑</a><a>详情</a></td>
+                <td class="table_operation"><a href="../operate_data/hkb_operate_month_edit.html">编辑</a><a href="../operate_data/hkb_operate_month_detail.html">详情</a></td>
             </tr>
             <tr align="center">
                 <td>2017.7.21</td>
                 <td>14561436</td>
                 <td>22</td>
                 <td>22</td>
-                <td class="table_operation"><a>编辑</a><a>详情</a></td>
+                <td class="table_operation"><a href="../operate_data/hkb_operate_month_edit.html">编辑</a><a href="../operate_data/hkb_operate_month_detail.html">详情</a></td>
             </tr>
             <tr align="center">
                 <td>2017.7.21</td>
                 <td>14561436</td>
                 <td>22</td>
                 <td>22</td>
-                <td class="table_operation"><a>编辑</a><a>详情</a></td>
+                <td class="table_operation"><a href="../operate_data/hkb_operate_month_edit.html">编辑</a><a href="../operate_data/hkb_operate_month_detail.html">详情</a></td>
             </tr>
             <tr align="center">
                 <td>2017.7.21</td>
                 <td>14561436</td>
                 <td>22</td>
                 <td>22</td>
-                <td class="table_operation"><a>编辑</a><a>详情</a></td>
+                <td class="table_operation"><a href="../operate_data/hkb_operate_month_edit.html">编辑</a><a href="../operate_data/hkb_operate_month_detail.html">详情</a></td>
             </tr>
             </tbody>
         </table>
@@ -130,7 +130,7 @@
         <span class="page_record">共<span>2/</span>页/共<span>30</span>条数据</span>
         <ul class="pagination">
             <li><a href="#">首页</a></li>
-            <li><a href="#">«</a></li>
+            <li><a class="pagination_none" href="#" disabled="disabled">«</a></li>
             <li><a href="#">1</a></li>
             <li><a class="active" href="#">2</a></li>
             <li><a href="#">3</a></li>
@@ -138,10 +138,22 @@
             <li><a href="#">8</a></li>
             <li><a href="#">9</a></li>
             <li class="active"><a href="#">10</a></li>
-            <li><a href="#">»</a></li>
+            <li><a class="pagination_none" href="#" disabled="disabled">»</a></li>
             <li><a href="#">末页</a></li>
             <div style="clear: both"></div>
         </ul>
     </div>
 
 </div>
+<script>
+
+    //多个input绑定 format: "YYYY"/"YYYY-MM"/"YYYY-MM-DD "/"YYYY-MM-DD hh:mm:ss"
+
+    $(".moredate").each(function(){
+        $(this).jeDate({
+            format: "YYYY-MM-DD"
+        });
+    });
+
+
+</script>

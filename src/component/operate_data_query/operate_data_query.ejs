@@ -12,26 +12,25 @@
 
     <div class="info_content_operation">
         <!-- data组件-->
-        <div class="control_list">
+        <div class="control_list half_list">
 
             <div class="hkb_date_list">
                 <span>开始时间：</span>
                 <span>
-                     <input type="text" class="layui-input hkb_item tcal" placeholder="请输入开始时间">
+                     <input type="text" class="layui-input hkb_item jeinput moredate" placeholder="请输入开始时间" readonly>
 
                 </span>
             </div>
 
-            <div class="hkb_date_list">
+            <div class="hkb_date_list ">
                 <span>结束时间：</span>
                 <span>
-                     <input type="text" class="layui-input hkb_item tcal" placeholder="请输入结束时间" >
+                     <input type="text" class="layui-input hkb_item jeinput moredate" placeholder="请输入结束时间"  readonly>
                 </span>
             </div>
         </div>
 
-
-        <div class="control_list">
+        <div class="control_list half_list">
 
             <div class="hkb_word_list">
                 <span>门店：</span>
@@ -50,7 +49,7 @@
 
         <!-- 按钮 双-->
 
-        <div class="control_list btn_list" style="text-align: right">
+        <div class="control_list list_row">
 
             <button type="button" class="hkb_btn btn_green">查询</button>
 
@@ -143,7 +142,7 @@
         <span class="page_record">共<span>2/</span>页/共<span>30</span>条数据</span>
         <ul class="pagination">
             <li><a href="#">首页</a></li>
-            <li><a href="#">«</a></li>
+            <li><a class="pagination_none" href="#" disabled="disabled">«</a></li>
             <li><a href="#">1</a></li>
             <li><a class="active" href="#">2</a></li>
             <li><a href="#">3</a></li>
@@ -151,7 +150,7 @@
             <li><a href="#">8</a></li>
             <li><a href="#">9</a></li>
             <li class="active"><a href="#">10</a></li>
-            <li><a href="#">»</a></li>
+            <li><a class="pagination_none" href="#" disabled="disabled">»</a></li>
             <li><a href="#">末页</a></li>
             <div style="clear: both"></div>
         </ul>
@@ -161,4 +160,17 @@
 
 
 </div>
+
+<script>
+
+
+
+    //多个input绑定 format: "YYYY"/"YYYY-MM"/"YYYY-MM-DD "/"YYYY-MM-DD hh:mm:ss"
+
+    $(".moredate").each(function(){
+        $(this).jeDate({
+            format: "YYYY-MM-DD"
+        });
+    });
+</script>
 
