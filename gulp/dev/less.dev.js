@@ -73,34 +73,13 @@ function devLess() {
 
         //.pipe(connect.reload());
 
-   /* gulp.src(['src/css/component.css'])
+         gulp.src(['src/lib/css/*.css'])//针对最基本的css，例如weui.css
 
-        //.pipe(minifyCss()) //压缩css
-
-        //.pipe(concat('component.min.css'))  // 合并匹配到的css文件
-
-        .pipe(gulp.dest('build/css')) //将会在src/css下生成index.css
+        .pipe(gulp.dest('build/lib/css'))
 
         .pipe(connect.reload());
 
-    gulp.src(['src/css/main.css'])
 
-        //.pipe(minifyCss()) //压缩css
-
-        //.pipe(concat('main.min.css'))
-
-        .pipe(gulp.dest('build/css'))
-
-        .pipe(connect.reload());
-
-    gulp.src(['src/css/bootstrap.min.css'])
-
-        //.pipe(concat('bootstrap.min.css'))
-
-        .pipe(gulp.dest('build/css'))
-
-        .pipe(connect.reload());
-*/
 }
 
 module.exports = devLess;

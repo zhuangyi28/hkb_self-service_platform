@@ -24,7 +24,17 @@ function devJs() {
 
         .pipe(gulp.dest('build/js'))
 
-        .pipe(browserSync.stream());
+        .pipe(connect.reload());
+
+
+
+    gulp.src(['src/lib/js/*.js']) //最基本的脚本文件
+
+        .pipe(gulp.dest('build/lib/js'))
+
+        .pipe(connect.reload());
+
+
 
         //.pipe(connect.reload());
 
