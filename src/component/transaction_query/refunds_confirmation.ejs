@@ -1,0 +1,103 @@
+<!--确认退款-->
+<div class="hkb_dialog" id="refundsConfirmation">
+
+    <div class="dialog_bg"></div>
+    <div class="dialog_box">
+        <div class="dialog_top">
+            <div class="dialog_close"><span>×</span></div>
+            <p>退款确认</p>
+        </div>
+        <!-- body-->
+        <div class="dialog_body">
+            <div class="dialog_content">
+                <!-- list 1-->
+                <div class="dialog_list">
+                    <div>
+                        <span>交易流水号：</span>
+                        <span>2018011009072900139062</span>
+                    </div>
+                    <div>
+                        <span>结算日期：</span>
+                        <span>2018-01-10</span>
+                    </div>
+                </div>
+                <div class="dialog_list">
+                    <div>
+                        <span>退款金额：</span>
+                        <span>80.00元</span>
+                    </div>
+                    <div>
+                        <span>操作人手机号：</span>
+                        <span>16782988176</span>
+                        <div class="identifying_code" id="identifyingCode">点击获取验证码</div>
+                    </div>
+                </div>
+                <div class="dialog_list">
+                    <div>
+                        <span>验证码：</span>
+                        <input class="dialog_input" placeholder="请输入验证码">
+                        <span class="dialog_error">*验证码错误</span>
+                    </div>
+                </div>
+
+                <div class="dialog_list">
+                    <div class="list_textarea">
+                        <span>备注：</span>
+                        <textarea class="dialog_textarea" placeholder="请输入验证码"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="dialog_footer">
+            <button type="button" class="hkb_btn btn_white" onclick="refundsDialog.hide()">关闭</button>
+            <button type="button" class="hkb_btn btn_green" id="drawBack">确认退款</button>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+    //退款确认
+    refundsDialog = new hkbShowDialog({
+
+        'ele': 'refundsConfirmation'
+    })
+
+    //退款成功
+
+    stateDialog = new hkbShowDialog({
+
+        'ele': 'refundsState'
+    })
+
+    //获取验证码
+    memberManagement.dropDownCode({
+
+        //倒计时按钮
+        'codeButton':document.getElementById('identifyingCode'),
+
+        //倒计时秒数
+        'nums':6
+
+    });
+
+    //确认退款
+    document.getElementById('drawBack').addEventListener('click',function () {
+
+        refundsDialog.hide()
+
+        setTimeout(function () {
+
+            stateDialog.show()
+
+        },600)
+
+    },false)
+
+    
+
+
+
+</script>

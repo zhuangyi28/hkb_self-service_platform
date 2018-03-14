@@ -1,0 +1,295 @@
+<div class="content_body">
+
+    <div class="title_content_title">
+        <p><img src="../../icon/tab_query_data_green.png">交易流水查询</p>
+    </div>
+
+
+    <div class="info_middle_body">
+
+    <!-- 操作组件-->
+
+
+      <div class="info_content_operation">
+
+          <!-- data组件-->
+          <div class="control_list half_list">
+
+            <div class="hkb_date_list">
+                <span>档口名称：</span>
+                <span>
+                     <input type="text" class="layui-input hkb_item "  placeholder="请输入手机号码">
+
+                </span>
+            </div>
+
+            <div class="hkb_date_list">
+                <span>用户名：</span>
+                <span>
+                     <input type="text" class="layui-input hkb_item"  placeholder="请输入手机号码" >
+
+                </span>
+            </div>
+
+
+        </div>
+
+          <div class="control_list half_list">
+
+              <div class="hkb_date_list">
+                  <span>开票状态：</span>
+                  <span>
+                      <select class="layui-input hkb_item">
+                        <option value="已选择" selected="selected">请选择</option>
+                        <option value="已归档">已归档</option>
+                        <option value="未归档">未归档</option>
+                        <option value="原始数据">原始数据</option>
+                        <option value="已调整">已调整</option>
+                    </select>
+
+                </span>
+              </div>
+
+              <div class="hkb_date_list">
+                  <span>流水号：</span>
+                  <span>
+                     <input type="text" class="layui-input hkb_item"  placeholder="请输入流水号" >
+
+                </span>
+              </div>
+
+
+          </div>
+
+          <div class="control_list half_list">
+
+              <div class="hkb_date_list">
+                  <span>交易开始时间：</span>
+                  <span>
+                     <input type="text" class="layui-input hkb_item jeinput moredate" placeholder="请输入开始时间" readonly="">
+
+                </span>
+              </div>
+
+              <div class="hkb_date_list">
+                  <span>交易结束时间：</span>
+                  <span>
+                     <input type="text" class="layui-input hkb_item jeinput moredate" placeholder="请输入开始时间" readonly="">
+
+                </span>
+              </div>
+
+
+          </div>
+
+          <div class="control_list half_list">
+
+              <div class="hkb_date_list">
+                  <span>查询记录：</span>
+                  <span>
+                      <select class="layui-input hkb_item">
+                        <option value="已选择" selected="selected">请选择</option>
+                        <option value="已归档">已归档</option>
+                        <option value="未归档">未归档</option>
+                        <option value="原始数据">原始数据</option>
+                        <option value="已调整">已调整</option>
+                    </select>
+
+                </span>
+              </div>
+
+          </div>
+
+
+
+          <!-- 按钮 双-->
+
+        <div class="control_list list_row">
+
+            <button type="button" class="hkb_btn btn_green">查询</button>
+
+            <button type="button" class="hkb_btn btn_white">重置</button>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- table -->
+
+    <div class="info_content_table">
+
+
+        <!-- table 单独-->
+        <table class="table_box" border="0" cellpadding="0" cellspacing="1" rules="cols">
+            <thead>
+            <tr class="hkb_title_tr">
+                <th>流水号</th>
+                <th>清算日</th>
+                <th>用户名</th>
+                <th>商户名称</th>
+                <th>档口名称</th>
+                <th>交易类型</th>
+                <th>交易金额</th>
+                <th>交易状态</th>
+                <th>交易时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr align="center">
+                <td>14561436</td>
+                <td>2018-01-11</td>
+                <td>庄中煲</td>
+                <td>上海庄中煲餐饮有限公司</td>
+                <td>麻辣烫</td>
+                <td>消费</td>
+                <td>100.00</td>
+                <td>交易成功</td>
+                <td>12:00:10</td>
+                <td class="table_operation"><a>退款</a></td>
+            </tr>
+            <tr align="center">
+                <td>14561436</td>
+                <td>2018-01-11</td>
+                <td>庄中煲</td>
+                <td>上海庄中煲餐饮有限公司</td>
+                <td>麻辣烫</td>
+                <td>消费</td>
+                <td>100.00</td>
+                <td>交易成功</td>
+                <td>12:00:10</td>
+                <td class="table_operation"><a>退款</a></td>
+            </tr>
+            <tr align="center">
+                <td>14561436</td>
+                <td>2018-01-11</td>
+                <td>庄中煲</td>
+                <td>上海庄中煲餐饮有限公司</td>
+                <td>麻辣烫</td>
+                <td>消费</td>
+                <td>100.00</td>
+                <td>交易成功</td>
+                <td>12:00:10</td>
+                <td class="table_operation"><a>退款</a></td>
+            </tr>
+            <tr align="center">
+                <td>14561436</td>
+                <td>2018-01-11</td>
+                <td>庄中煲</td>
+                <td>上海庄中煲餐饮有限公司</td>
+                <td>麻辣烫</td>
+                <td>快捷消费</td>
+                <td>100.00</td>
+                <td>交易成功</td>
+                <td>12:00:10</td>
+                <td>退款</td>
+            </tr>
+            <tr align="center">
+                <td>14561436</td>
+                <td>2018-01-11</td>
+                <td>庄中煲</td>
+                <td>上海庄中煲餐饮有限公司</td>
+                <td>麻辣烫</td>
+                <td>退款</td>
+                <td>100.00</td>
+                <td>交易成功</td>
+                <td>12:00:10</td>
+                <td>退款</td>
+            </tr>
+            <tr align="center">
+                <td>14561436</td>
+                <td>2018-01-11</td>
+                <td>庄中煲</td>
+                <td>上海庄中煲餐饮有限公司</td>
+                <td>麻辣烫</td>
+                <td>退款（交易成功）</td>
+                <td>100.00</td>
+                <td>交易成功</td>
+                <td>12:00:10</td>
+                <td class="table_operation"><a>退款</a></td>
+            </tr>
+            <tr align="center">
+                <td>14561436</td>
+                <td>2018-01-11</td>
+                <td>庄中煲</td>
+                <td>上海庄中煲餐饮有限公司</td>
+                <td>麻辣烫</td>
+                <td>消费</td>
+                <td>100.00</td>
+                <td>交易成功</td>
+                <td>12:00:10</td>
+                <td class="table_operation"><a>退款</a></td>
+            </tr>
+            <tr align="center">
+                <td>14561436</td>
+                <td>2018-01-11</td>
+                <td>庄中煲</td>
+                <td>上海庄中煲餐饮有限公司</td>
+                <td>麻辣烫</td>
+                <td>消费</td>
+                <td>100.00</td>
+                <td>交易成功</td>
+                <td>12:00:10</td>
+                <td class="table_operation"><a>退款</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- next-->
+    <div class="info_page">
+        <span class="page_record">共<span>2/</span>页/共<span>30</span>条数据</span>
+        <ul class="pagination">
+            <li><a href="#">首页</a></li>
+            <li><a class="pagination_none" href="#" disabled="disabled">«</a></li>
+            <li><a href="#">1</a></li>
+            <li><a class="active" href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li>&nbsp;...&nbsp;&nbsp;</li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li class="active"><a href="#">10</a></li>
+            <li><a class="pagination_none" href="#" disabled="disabled">»</a></li>
+            <li><a href="#">末页</a></li>
+            <div style="clear: both"></div>
+        </ul>
+    </div>
+
+
+    </div>
+
+</div>
+
+<script>
+
+    //退款弹出框
+    memberManagement.refundsDom();
+
+    //确认退款
+    document.getElementById('drawBack').addEventListener('click',function () {
+
+        refundsDialog.hide()
+
+        setTimeout(function () {
+
+            stateDialog.show()
+
+        },600)
+
+    },false)
+
+
+    //多个input绑定 format: "YYYY"/"YYYY-MM"/"YYYY-MM-DD "/"YYYY-MM-DD hh:mm:ss"
+
+    $(".moredate").each(function(){
+        $(this).jeDate({
+            format: "YYYY-MM-DD"
+        });
+    });
+
+
+
+</script>

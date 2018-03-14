@@ -107,17 +107,15 @@ var basicPlatform = {
     var allTab=huikabaoTabul.getElementsByClassName('tab_block');
 
 
-    for(var i=0;i<allTab.length;i++){
+        for(var i=0;i<allTab.length;i++){
 
         allTab[i].addEventListener('click',function () {
 
             var thisSelectEle=document.getElementsByClassName('tab_all_selected')[0];
 
-
             if(thisSelectEle){
 
-
-                thisSelectEle.className=thisSelectEle.className.replace(' tab_all_selected','')
+                thisSelectEle.className = 'tab_block';
 
                 if(thisSelectEle!=this){
 
@@ -132,18 +130,114 @@ var basicPlatform = {
 
             }
 
-
-
-
-
-
-
-        },false)
+        },false);
 
 
     }
 
+    if(document.getElementsByClassName('content_body')[0]){
 
+        document.getElementsByClassName('content_body')[0].addEventListener('click',function () {
+
+            if(huikabaoTabul.getElementsByClassName('tab_all_selected')[0]){
+
+                huikabaoTabul.getElementsByClassName('tab_all_selected')[0].className = 'tab_block';
+            }
+
+
+
+        },false);
+
+    }
+
+
+
+
+
+    },
+    navUserDrop:function () {
+
+
+    var clickEle = document.getElementsByClassName('hkb_user')[0];
+
+    var thisEle = document.getElementById('userList');
+
+    var hrefBtn = document.getElementsByClassName('user_operation')[0].getElementsByTagName('a');
+
+
+    clickEle.addEventListener('click',function () {
+
+
+        if(thisEle.className.indexOf('show') > -1){
+
+
+            transitionMove(thisEle);
+
+            thisEle.className = thisEle.className.replace(' show','');
+
+
+        }
+
+        else {
+
+
+            thisEle.style.display = 'block';
+
+            setTimeout(function () {
+
+                thisEle.className += ' show';
+
+            },1)
+
+
+
+        }
+
+        function transitionMove(ele) {
+
+            // Safari 3.1 到 6.0 代码
+            ele.addEventListener("webkitTransitionEnd", MFunction);
+            // 标准语法
+            ele.addEventListener("transitionend", MFunction);
+
+            function MFunction() {
+
+                ele.style.display = 'none';
+                // Safari 3.1 到 6.0 代码
+                ele.removeEventListener("webkitTransitionEnd", MFunction);
+                // 标准语法
+                ele.removeEventListener("transitionend", MFunction);
+
+
+            }
+
+
+        }
+
+        addevent();
+
+        function addevent() {
+
+            for (var i=0;i<hrefBtn.length;i++){
+
+
+                hrefBtn[i].addEventListener('click',function () {
+
+
+                    event.preventDefault();
+
+                    thisEle.className = thisEle.className.replace(' show', '')
+
+
+                },false)
+            }
+        }
+
+
+
+
+
+    },false)
 
 
 

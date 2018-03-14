@@ -1,12 +1,11 @@
+
+
+
 <div class="content_body">
 
     <div class="title_content_title">
         <p><img src="../../icon/tab_management_data_green.png">商户数据</p>
     </div>
-
-
-
-
 
     <!-- 操作组件-->
 
@@ -17,7 +16,7 @@
             <div class="hkb_date_list">
                 <span>开始时间：</span>
                 <span>
-                     <input type="text" class="layui-input hkb_item tcal" placeholder="请输入开始时间">
+                     <input type="text" class="layui-input hkb_item jeinput moredate" placeholder="请输入开始时间"  value="" readonly>
 
                 </span>
             </div>
@@ -25,24 +24,16 @@
             <div class="hkb_date_list">
                 <span>结束时间：</span>
                 <span>
-                     <input type="text" class="layui-input hkb_item tcal" placeholder="请输入结束时间">
+                     <input type="text" class="layui-input hkb_item jeinput moredate" placeholder="请输入结束时间"  value="" readonly>
                 </span>
             </div>
         </div>
 
         <!-- 按钮 双-->
 
-        <div class="control_list btn_list" style="text-align: right">
+        <div class="control_list btn_list">
 
-                <button type="button" class="hkb_btn btn_green" onclick="basicHkb.dialogShow({
-
-'dialogTitle':'222',
-'dialogContent':'111',
-'noCheck':true,
-'cancleBtnText':'关闭'
-
-
-})">查询</button>
+                <button type="button" class="hkb_btn btn_green">查询</button>
 
                 <button type="button" class="hkb_btn btn_white">重置</button>
 
@@ -97,7 +88,9 @@
     <!-- table title-->
 
     <div class="title_content_title title_gray">
-        <p>总计</p>
+        <p>数据表</p>
+        <p><button type="button" class="hkb_btn btn_green">导出表格</button></p>
+
     </div>
 
     <!-- table -->
@@ -146,7 +139,7 @@
                 <td>10</td>
                 <td>300</td>
                 <td>300</td>
-                <td class="table_operation"><a>明细</a></td>
+                <td class="table_operation"><a href="../merchant_data/hkb_store_data.html">明细</a></td>
             </tr>
             <tr align="center">
                 <td>
@@ -161,7 +154,7 @@
                 <td>10</td>
                 <td>300</td>
                 <td>300</td>
-                <td class="table_operation"><a>明细</a></td>
+                <td class="table_operation"><a href="../merchant_data/hkb_store_data.html">明细</a></td>
             </tr>
             <tr align="center">
                 <td>
@@ -176,7 +169,7 @@
                 <td>10</td>
                 <td>300</td>
                 <td>300</td>
-                <td class="table_operation"><a>明细</a></td>
+                <td class="table_operation"><a href="../merchant_data/hkb_store_data.html">明细</a></td>
             </tr>
             <tr align="center">
                 <td>
@@ -191,7 +184,7 @@
                 <td>10</td>
                 <td>300</td>
                 <td>300</td>
-                <td class="table_operation"><a>明细</a></td>
+                <td class="table_operation"><a href="../merchant_data/hkb_store_data.html">明细</a></td>
             </tr>
             <tr align="center">
                 <td>
@@ -206,7 +199,7 @@
                 <td>10</td>
                 <td>300</td>
                 <td>300</td>
-                <td class="table_operation"><a>明细</a></td>
+                <td class="table_operation"><a href="../merchant_data/hkb_store_data.html">明细</a></td>
             </tr>
             <tr align="center">
                 <td>
@@ -221,7 +214,7 @@
                 <td>10</td>
                 <td>300</td>
                 <td>300</td>
-                <td class="table_operation"><a>明细</a></td>
+                <td class="table_operation"><a href="../merchant_data/hkb_store_data.html">明细</a></td>
             </tr>
             <tr align="center">
                 <td>
@@ -236,7 +229,7 @@
                 <td>10</td>
                 <td>300</td>
                 <td>300</td>
-                <td class="table_operation"><a>明细</a></td>
+                <td class="table_operation"><a href="../merchant_data/hkb_store_data.html">明细</a></td>
 
             </tr>
             <tr align="center">
@@ -252,7 +245,7 @@
                 <td>10</td>
                 <td>300</td>
                 <td>300</td>
-                <td class="table_operation"><a>明细</a></td>
+                <td class="table_operation"><a href="../merchant_data/hkb_store_data.html">明细</a></td>
 
             </tr>
             </tbody>
@@ -265,7 +258,8 @@
         <span class="page_record">共<span>2/</span>页/共<span>30</span>条数据</span>
         <ul class="pagination">
             <li><a href="#">首页</a></li>
-            <li><a href="#">«</a></li>
+            <!-- 如果只有一条分类的话 加上pagination_none为不可点击样式-->
+            <li><a  class="pagination_none" href="#">«</a></li>
             <li><a href="#">1</a></li>
             <li><a class="active" href="#">2</a></li>
             <li><a href="#">3</a></li>
@@ -281,4 +275,15 @@
 
 
 </div>
+
+<script>
+    //多个input绑定 format: "YYYY"/"YYYY-MM"/"YYYY-MM-DD "/"YYYY-MM-DD hh:mm:ss"
+
+    $(".moredate").each(function(){
+        $(this).jeDate({
+            format: "YYYY-MM-DD"
+        });
+    });
+
+</script>
 

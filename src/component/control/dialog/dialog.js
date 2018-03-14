@@ -26,10 +26,10 @@ var hkbShowDialog = function (details) {
 
 
 
-    if(thisEle.getElementsByClassName('dialog_close')[0]) {
+    if(thisEle.getElementsByClassName('dialog_bg')[0]) {
 
 
-            addEvent(thisEle.getElementsByClassName('dialog_close')[0]);
+            addEvent(thisEle.getElementsByClassName('dialog_bg')[0]);
 
 
     }
@@ -106,9 +106,6 @@ hkbShowDialog.prototype.hide = function () {
 
     windowBanEvent.unbundling();//解绑页面禁止事件
 
-    /*document.getElementsByTagName("body")[0].className = "";//页面禁止滚动
-
-     document.getElementsByTagName("html")[0].className = "";//页面禁止滚动*/
 
 
 

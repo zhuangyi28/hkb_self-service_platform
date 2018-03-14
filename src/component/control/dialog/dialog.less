@@ -30,12 +30,13 @@
     outline: 0;
     box-shadow: 0 3px 9px rgba(0,0,0,.5);
     width: 800px;
-    margin: 140px auto;
+    margin: 100px auto;
     overflow: hidden;
     transform: translate3d(0,-25%,0);
     transition: all .3s ease-out;
     @media screen and (max-width:414px){
       width: 320px;
+      margin: 40px auto;
     }
 
   }
@@ -74,8 +75,13 @@
     }
   }
   .dialog_body{
-    padding: 30px 15px;
+    padding: 30px 15px 15px;
     min-height: 100px;
+    .dialog_big_text{
+      margin:0 auto;
+      font-size: 26px;
+      text-align: center;
+    }
   }
   .dialog_footer{
     border-top: 1px solid #e5e5e5;
