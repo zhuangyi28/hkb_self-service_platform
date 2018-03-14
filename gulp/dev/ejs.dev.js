@@ -35,16 +35,20 @@ function devEjs() {
 
                     var addHtml = "";
 
-                    addHtml += "<link rel='stylesheet'  href='../../css/hkbServicePlatform.css'/>\n ";//框架
 
 
-                    $('head').prepend(addHtml);
+                    addHtml += "<link rel='stylesheet'  href='../../css/hkbServicePlatform.css'/>\n<link rel='stylesheet'  href='../../lib/css/jedate.css'/>\n ";//框架
+
+                    addHtml +='<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">';//ico
+
+                    
+                        $('head').prepend(addHtml);
 
                 },
 
             parserOptions: {
-                // Options here
-               // decodeEntities: false
+                //Options here
+                decodeEntities: false
             }
 
             }
@@ -53,7 +57,7 @@ function devEjs() {
         //顺序增加脚本文件
         .pipe(cheerio(function ($) {
 
-            var addJSHtml = '';//保存引用的业务脚本
+            var addJSHtml = "<script src='../../lib/js/jquery-3.0.0.min.js'></script>\n";//保存引用的业务脚本
 
             var addJsRun = "<script src='../../js/hkbServicePlatform.js'></script>\n";//运行的脚本
 
